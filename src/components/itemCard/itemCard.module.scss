@@ -1,0 +1,43 @@
+.item {
+
+    width: 150px;
+    height: 260px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+
+    .img {
+        width: 140px;
+        height: 140px;
+        border: 4px black ridge;
+        margin-bottom: 5px;
+
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+        min-height: 2em;
+        line-height: 120%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .cost {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        color: rgb(136, 136, 136);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-clamp: 4;
+    }
+}
