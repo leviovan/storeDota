@@ -7,7 +7,6 @@ import { useAppDispatch, useAppSelector } from "../../store/store";
 import { addNewItem, toogleModalAddItem } from "../../store/slice/items/items";
 import Notification from "../notification/Notification";
 const ModalAddItems = () => {
-
     const [title, setTitle] = useState("")
     const [imgLink, setimgLink] = useState("")
     const [cost, setCost] = useState("")

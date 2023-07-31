@@ -7,7 +7,6 @@ export const ItemCard: FC<Iitem> = ({name,cost,description,img}:Iitem)=> {
 
   const dispatch =useAppDispatch()
  
-
   const OpenModalItem=()=>{
     dispatch(setCurrnetItem({name,cost,description,img}))
   }

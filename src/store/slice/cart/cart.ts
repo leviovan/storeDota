@@ -1,11 +1,6 @@
 import { Iitem } from './../items/items';
 import { createSlice } from "@reduxjs/toolkit"
 
-
-
-
-
-
 export interface Iitems {
     items: Iitem[],
     sum:number
@@ -14,9 +9,7 @@ export interface Iitems {
 const initialState: Iitems ={
     items: [],
     sum:0
-    }
-
-
+}
 
 export const cartSlice = createSlice({
     name: 'cart',
@@ -27,10 +20,8 @@ export const cartSlice = createSlice({
             state.sum+=action.payload.cost
         },
         removeItemIncard:(state,action)=>{
-
             state.sum=state.sum-+state.items[action.payload].cost 
             state.items.splice(action.payload,1); 
-           
         }
     }
 })

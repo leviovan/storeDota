@@ -7,7 +7,6 @@ export interface Iitem {
     img: string;
     description: string;
     id: string;
-
 }
 export interface Iitems {
     items: Iitem[],
@@ -16,7 +15,6 @@ export interface Iitems {
     modalAddCard:boolean
     modalCart:boolean
 }
-
 const initialState: Iitems = {
     items: [],
     currentItems:{  name: " ",
@@ -26,20 +24,16 @@ const initialState: Iitems = {
                     id: "1"},
     modalcard:false,
     modalAddCard:false,
-    modalCart:false}
-
-
-
+    modalCart:false
+}
 export const fetchitem = createAsyncThunk(
-    'users/fetchById',
+    'items/fetchById',
     async () => {
         const response = await fetch(`https://64c4f6cdc853c26efada577e.mockapi.io/item`)
         console.log(response);
         return (await response.json())
     }
 )
-
-
 export const itemsSlice = createSlice({
     name: 'items',
     initialState,
@@ -56,7 +50,8 @@ export const itemsSlice = createSlice({
         id: "1"}
         state.modalcard=false
 
-    },   toogleModalAddItem: (state) => {     
+    },   
+    toogleModalAddItem: (state) => {     
         state.modalAddCard=!state.modalAddCard
     },  
     toogleModalCart: (state) => {     
